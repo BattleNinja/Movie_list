@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>Movie List</h1>
+  </div>
+
+  <div class='container'>
+    <ul>
+      {% for movie in movies %}
+      <li><a href='http://www.imdb.com/title/tt{{movie.imdb}}'>{{movie.name}}</a> {{movie.year}}</li>
+      {% else %}
+      <li>No Movie found</li>
+      {% endfor %}
+      <ul>
+  </div>
+
+
+
+</body>
+
+</html>
